@@ -10,6 +10,32 @@ it shows you how easy is to create a monorepo setup with [pnpm]
 Each of the packages (`packages/**`) has it's own readme to explain
 how to work inside that specific package
 
+## Install
+first install [pnpm]
+- `npm i -g pnpm`
+
+then run 
+- `pnpm recursive install`
+- `pnpm run build:lib`
+
+after that you should be able to lift any of the applications you can check `package.json` on the root to see available commands
+
+- `pnpm run dev:api2:website1`
+- `pnpm run dev:api2:website2`
+- `pnpm run dev:api2:website3`
+
+these run the nestjs backend with Aurelia, Vue or Angular (respectively).
+
+To run a command from a specific package.json, use [pnpm]'s filter commands
+
+- `pnpm run dev --filter @monosample/api1`
+
+that will run the `dev` command in the `@monosample/api1` package which resides in `packages/api1/package.json`, another example would be
+- `pnpm run serve --filter @monosample/website2`
+
+that will run the `serve` command in the `@monosample/website2` package which resides in `packages/website2/package.json`
+
+
 
 ## Root Setup
 The following structure is used in this sample
