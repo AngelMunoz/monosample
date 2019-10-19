@@ -61,7 +61,7 @@ The following structure is used in this sample
 >    {
 >      "name": "@monosample/lib",
 >      "version": "1.0.0",
->      "rivate": true,
+>      "private": true,
 >    }
 >    // packages/api1/package.json
 >    {
@@ -79,9 +79,12 @@ The following structure is used in this sample
 >    ```json
 >    {
 >      "scripts": {
->         "build:lib": "cd packages/lib && pnpm run build",
->         "build:lib:watch": "cd packages/lib && pnpm run build:watch"
+>        "build:lib": "pnpm run build --filter @monosample/lib",
+>        "build:lib:watch": "pnpm run build:watch --filter @monosample/lib",
 >       }
 >    }
 >    ```
 >    that way it's easier to keep on your root (`pnpm run build:lib`) terminal instead having a terminal open for each package. If it ever becomes too messy, remember you can always put javascript files on your root and use any utility library inside your scripts
+> 6. Messy dependencies, if you are using a dependency that for some reason does not mark a dependency of itself in it's package.json but requires it because it's available on `node_modules` you might have trouble with tools like webpack trying to locate that package and it somehow "doesn't exist", you can always require that package manually but if you are starting to have a lot of issues with dependencies create an `.npmrc` file on your project and add the following line `shamefully-hoist=true` like in `packages/website1/.npmrc` or `packages/website2/.npmrc` this will make pnpm recreate a similar structure as `pnpm`'s normal flat structure, you can find more information here:
+>
+> - https://pnpm.js.org/en/faq#pnpm-does-not-work-with-your-project-here
