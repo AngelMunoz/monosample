@@ -1,0 +1,17 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "A:\\github\\mono-sample"
+  },
+  "1 error pnpm": {
+    "message": {
+      "code": "ERR_PNPM_NO_SCRIPT"
+    },
+    "err": {
+      "name": "Error",
+      "message": "Missing script: build:lib",
+      "code": "ERR_PNPM_NO_SCRIPT",
+      "stack": "Error: Missing script: build:lib\n    at Object.run (A:\\nvm\\v10.15.3\\node_modules\\pnpm\\lib\\cmd\\run.js:17:15)"
+    }
+  }
+}
