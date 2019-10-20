@@ -5,7 +5,7 @@
   "main": "./dist/app.js",
   "scripts": {
     "prestart": "tsc -p .",
-    "dev": "concurrently \"tsc -p . --watch\" \"node --inspect dist/app.js\"",
+    "dev": "concurrently \"tsc -p .\" \"node --inspect dist/app.js\"",
     "start": "node dist/app.js"
   },
   "keywords": [],
