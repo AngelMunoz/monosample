@@ -7,6 +7,7 @@
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "postinstall": "pnpm run build",
     "build": "tsc -p .",
     "build:watch": "tsc -p . --watch"
   },
