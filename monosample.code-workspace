@@ -9,27 +9,27 @@
       "name": "Typeorm Migrations"
     },
     {
-      "path": "packages\\lib",
+      "path": "packages/lib",
       "name": "Core Library"
     },
     {
-      "path": "packages\\api1",
+      "path": "packages/api1",
       "name": "Api 1"
     },
     {
-      "path": "packages\\api2",
+      "path": "packages/api2",
       "name": "Api 2"
     },
     {
-      "path": "packages\\website1",
+      "path": "packages/website1",
       "name": "Website 1"
     },
     {
-      "path": "packages\\website2",
+      "path": "packages/website2",
       "name": "Website 2"
     },
     {
-      "path": "packages\\website3",
+      "path": "packages/website3",
       "name": "Website 3"
     },
   ],
