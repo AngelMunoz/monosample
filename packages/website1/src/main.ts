@@ -1,4 +1,5 @@
 import 'bootstrap';
+import '@monosample/core-ui';
 import { Aurelia, PLATFORM } from 'aurelia-framework';
 import { HttpClient, HttpClientConfiguration } from 'aurelia-fetch-client';
 import { bearerTokenInterceptor } from './interceptors';

@@ -1,5 +1,6 @@
 <template>
   <form @submit.prevent="submit">
+    <smp-hello-world message="This is vue"></smp-hello-world>
     <section>
       <label for="email">Email</label>
       <input type="email" name="email" id="email" v-model="params.email" required />

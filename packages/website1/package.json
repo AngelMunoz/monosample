@@ -8,7 +8,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@monosample/lib": "1.0.0",
+    "@monosample/lib": "workspace:1.0.0",
+    "@monosample/core-ui": "workspace:1.0.0",
     "@types/jwt-decode": "^2.2.1",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.3.2",

@@ -8,12 +8,14 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@monosample/lib": "1.0.0",
+    "@monosample/lib": "workspace:1.0.0",
+    "@monosample/core-ui": "workspace:1.0.0",
     "axios": "^0.19.0",
     "core-js": "^3.1.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
-    "jwt-decode": "2.2.0"
+    "jwt-decode": "2.2.0",
+    "cache-loader": "4.1.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
