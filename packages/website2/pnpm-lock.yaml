@@ -11,7 +11,7 @@ specifiers:
   '@vue/cli-plugin-unit-jest': ^4.0.0
   '@vue/cli-service': ^4.0.0
   '@vue/test-utils': 1.0.0-beta.29
-  axios: ^0.19.0
+  axios: 0.21.1
   cache-loader: 4.1.0
   core-js: ^3.1.2
   jwt-decode: 2.2.0
@@ -23,7 +23,7 @@ specifiers:
 dependencies:
   '@monosample/core-ui': link:../core-ui
   '@monosample/lib': link:../lib
-  axios: 0.19.0
+  axios: 0.21.1
   cache-loader: 4.1.0
   core-js: 3.3.2
   jwt-decode: 2.2.0
@@ -1878,11 +1878,12 @@ packages:
     resolution: {integrity: sha512-ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==}
     dev: true
 
-  /axios/0.19.0:
-    resolution: {integrity: sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==}
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
     dependencies:
-      follow-redirects: 1.5.10
-      is-buffer: 2.0.4
+      follow-redirects: 1.14.1
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /babel-code-frame/6.26.0:
@@ -3193,12 +3194,6 @@ packages:
       ms: 2.0.0
     dev: true
 
-  /debug/3.1.0:
-    resolution: {integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==}
-    dependencies:
-      ms: 2.0.0
-    dev: false
-
   /debug/3.2.6:
     resolution: {integrity: sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==}
     dependencies:
@@ -4005,11 +4000,14 @@ packages:
       readable-stream: 2.3.6
     dev: true
 
-  /follow-redirects/1.5.10:
-    resolution: {integrity: sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==}
+  /follow-redirects/1.14.1:
+    resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
     engines: {node: '>=4.0'}
-    dependencies:
-      debug: 3.1.0
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /follow-redirects/1.9.0:
@@ -4754,11 +4752,6 @@ packages:
   /is-buffer/1.1.6:
     resolution: {integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==}
     dev: true
-
-  /is-buffer/2.0.4:
-    resolution: {integrity: sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==}
-    engines: {node: '>=4'}
-    dev: false
 
   /is-callable/1.1.4:
     resolution: {integrity: sha512-r5p9sxJjYnArLjObpjA4xu5EKI3CuKHkJXMhT7kwbpUyIFD1n5PMAsoPvWnvtZiNz7LjkYDRZhd7FlI0eMijEA==}
@@ -6152,6 +6145,7 @@ packages:
 
   /ms/2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    dev: true
 
   /ms/2.1.1:
     resolution: {integrity: sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==}

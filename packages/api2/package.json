@@ -27,7 +27,7 @@
     "rxjs": "^6.5.3",
     "@nestjs/typeorm": "6.2.0",
     "pg": "7.12.1",
-    "typeorm": "0.2.20",
+    "typeorm": "0.2.32",
     "bcryptjs": "2.4.3",
     "jsonwebtoken": "8.5.1",
     "@monosample/lib": "1.0.0"
